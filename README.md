@@ -1,5 +1,5 @@
 # Enhanced Locally low-rank Imaging for Tissue contrast Enhancement (ELITE)
-This repository contains Matlab scripts to reproduce our reconstruction framework for dynamic MRI radial k-space data. This code is appropriate for Dynamic Contrast Enhanced (DCE)-MRI data. Our reconstruction framework leverages innovative acceleration concepts based on low-rank subspace modeling and machine learning. The code includes an exaple of raw k-space breast DCE dataset. 
+This repository contains MATLAB scripts to reproduce our reconstruction framework for dynamic MRI radial k-space data. The code is specifically designed for Dynamic Contrast-Enhanced (DCE) MRI data. Our reconstruction framework incorporates acceleration techniques based on low-rank subspace modeling and machine learning. An example raw k-space breast DCE dataset is also included.
 
 ## manuscript
 This framework is described in our latest manuscript titled 'Dynamic MRI with Locally Low-Rank Subspace Constraint: Towards 1-Second Temporal Resolution Aided by Deep Learning'.
