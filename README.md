@@ -4,7 +4,7 @@ This repository contains MATLAB and Python scripts to replicate our reconstructi
 
 ### ELITE Reconstruction
 
-The main MATLAB code `TWIX_2_GRASP_seg_main.m` perfoms a temporal basis estimation using principal component analysis (PCA) for each tissue segment. By default, this code will reconstruct an image series with a temporal resolution of 4.2 seconds (8 spokes) containing 36 time frames. To run this code, make sure `flags.highRes` (inside `loadingGraspParams.m`) is set to False. An example of a segementation mask file can be found inside the `data` folder, and the corresponding raw k-space breast dataset (`fastMRI_breast_141_2.h5`) can be freely downloaded from fastMRI: https://fastmri.med.nyu.edu/
+The main MATLAB code `TWIX_2_GRASP_seg_main.m` perfoms a temporal basis estimation using principal component analysis (PCA) for each tissue segment. By default, this code will reconstruct an image series with a temporal resolution of 4.2 seconds (8 spokes) containing 36 time frames. To run this code, make sure `flags.highRes` (inside `loadingGraspParams.m`) is set to False. An example of a segementation mask file can be found inside the `data` folder, and the corresponding raw k-space breast dataset (`fastMRI_breast_141_2.h5`) can be freely downloaded from fastMRI: https://fastmri.med.nyu.edu/. 
 
 ### ELITE Reconstruction Aided by Residual Neural Network (ResNet)
 
@@ -32,7 +32,7 @@ python Test_DCE_ResNet.py
 ```
 
 - The script uses a real undersampled DCE image series reconstructed with 2 spokes as an input (`GRASP_real_lowRes_BC23_slice69.mat`).
-- The script will output a DCE image series with reduced streak artifacts while maintaining contrast dynamics (`GRASP_pred_lowRes_BC23_slice69.mat`).
+- The script generates a DCE image series with reduced streak artifacts and maintaining contrast dynamics (`GRASP_pred_lowRes_BC23_slice69.mat`).
 
 #### Run ELITE Reconstruction with ResNet output 
 
@@ -40,4 +40,5 @@ ResNet output image series (`GRASP_pred_lowRes_BC23_slice69.mat`) can be found i
 
 ## Citation
 
-If you use the ELITE DCE Breast data or code in your research, please cite our preprint: https://doi.org/10.1148/ryai.240345
+If you use the ELITE DCE Breast data or code in your research, please cite our preprint: https://doi.org/10.21203/rs.3.rs-5448452/v1
+For more detilas regarding our latest fastMRI Breast dataset, please refer to: https://doi.org/10.1148/ryai.240345. 
