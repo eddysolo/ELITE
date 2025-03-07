@@ -36,7 +36,7 @@ python Test_DCE_ResNet.py
 - The script uses a real undersampled DCE image series reconstructed with 2 spokes as an input (`GRASP_real_lowRes_BC23_slice69.mat`).
 - The script will output a DCE image series with reduced streak artifacts while maintaining contrast dynamics ('GRASP_pred_lowRes_BC23_slice69.mat`).
 
-#### Run ELITE framework with ResNet output 
+#### Run ELITE Reconstruction with ResNet output 
 
 ResNet output image series ('GRASP_pred_lowRes_BC23_slice69.mat') can be found under 'data' folder and can loaded by 'TWIX_2_GRASP_seg_main.m' by setting flags.highRes parameter to True (inside `loadingGraspParams.m`). The ResNet image series output will go through a quick basis estimation, which will then be used for the reconstruction of a high spatial and temporal resolution final image series with a 1-second (2 spokes) temporal resolution and 144 time frames. 
 
