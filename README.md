@@ -4,7 +4,7 @@ This repository contains MATLAB and Python scripts to replicate our reconstructi
 
 ### ELITE Reconstruction
 
-The main MATLAB code `TWIX_2_GRASP_seg_main.m` perfoms a temporal basis estimation using principal component analysis (PCA) for each tissue segment. By default, this code will reconstruct an image series with a temporal resolution of 4.2 seconds (8 spokes) containing 36 time frames. To run this code, please make sure `flags.highRes` (inside `loadingGraspParams.m`) is set to False. An example of a segementation mask file can be found inside 'data' forder, and a corresponding raw k-space breast dataset ('fastMRI_breast_141_2.h5') can be freely downloaded from fastMRI: https://fastmri.med.nyu.edu/
+The main MATLAB code `TWIX_2_GRASP_seg_main.m` perfoms a temporal basis estimation using principal component analysis (PCA) for each tissue segment. By default, this code will reconstruct an image series with a temporal resolution of 4.2 seconds (8 spokes) containing 36 time frames. To run this code, please make sure `flags.highRes` (inside `loadingGraspParams.m`) is set to False. An example of a segementation mask file can be found inside `data` forder, and a corresponding raw k-space breast dataset ('fastMRI_breast_141_2.h5') can be freely downloaded from fastMRI: https://fastmri.med.nyu.edu/
 
 ### ELITE Reconstruction Aided by Residual Neural Network (ResNet)
 
@@ -36,7 +36,7 @@ python Test_DCE_ResNet.py
 
 #### Run ELITE Reconstruction with ResNet output 
 
-ResNet output image series (`GRASP_pred_lowRes_BC23_slice69.mat`) can be found inside 'data' folder and can loaded by 'TWIX_2_GRASP_seg_main.m' by setting flags.highRes parameter to True (inside `loadingGraspParams.m`). The ResNet image series output will go through a quick basis estimation, which will then be used for the reconstruction of a high spatial and temporal resolution final image series with a 1-second (2 spokes) temporal resolution and 144 time frames. 
+ResNet output image series (`GRASP_pred_lowRes_BC23_slice69.mat`) can be found inside `data` folder and can loaded by 'TWIX_2_GRASP_seg_main.m' by setting flags.highRes parameter to True (inside `loadingGraspParams.m`). The ResNet image series output will go through a quick basis estimation, which will then be used for the reconstruction of a high spatial and temporal resolution final image series with a 1-second (2 spokes) temporal resolution and 144 time frames. 
 
 ## Citation
 
