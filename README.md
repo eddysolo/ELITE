@@ -36,7 +36,7 @@ python Test_DCE_ResNet.py
 
 #### Run ELITE Reconstruction with ResNet output 
 
-ResNet output image series ('GRASP_pred_lowRes_BC23_slice69.mat') can be found inside 'data' folder and can loaded by 'TWIX_2_GRASP_seg_main.m' by setting flags.highRes parameter to True (inside `loadingGraspParams.m`). The ResNet image series output will go through a quick basis estimation, which will then be used for the reconstruction of a high spatial and temporal resolution final image series with a 1-second (2 spokes) temporal resolution and 144 time frames. 
+ResNet output image series (`GRASP_pred_lowRes_BC23_slice69.mat`) can be found inside 'data' folder and can loaded by 'TWIX_2_GRASP_seg_main.m' by setting flags.highRes parameter to True (inside `loadingGraspParams.m`). The ResNet image series output will go through a quick basis estimation, which will then be used for the reconstruction of a high spatial and temporal resolution final image series with a 1-second (2 spokes) temporal resolution and 144 time frames. 
 
 ## Citation
 
