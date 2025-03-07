@@ -8,7 +8,7 @@ The main MATLAB code `TWIX_2_GRASP_seg_main.m` can be executed with the two opti
 
 ### ELITE Reconstruction
 
-Temporal basis estimation is performed using principal component analysis (PCA) for each tissue segment, with a default temporal resolution of 4.2 seconds (8 spokes), resulting in high spatial resolution image series containing 36 time frames. The matlab code is set by default to run this reconstruction. An example segementation mask file can be found under 'data' forder. To run the code, the corresponding raw k-space breast dataset ('fastMRI_breast_141_2.h5') can be freely downloaded from fastMRI: https://fastmri.med.nyu.edu/
+Temporal basis estimation is performed using principal component analysis (PCA) for each tissue segment, with a default temporal resolution of 4.2 seconds (8 spokes), resulting in high spatial resolution image series containing 36 time frames. The matlab code is set by default to run this reconstruction. An example of a segementation mask file can be found under 'data' forder. To run the code, the corresponding raw k-space breast dataset ('fastMRI_breast_141_2.h5') can be freely downloaded from fastMRI: https://fastmri.med.nyu.edu/
 
 ### ELITE Reconstruction Aided by Residual Neural Network (ResNet)
 
@@ -42,7 +42,7 @@ python Test_DCE_ResNet.py
 
 #### Run ELITE framework with ResNet output 
 
-ResNet output image series ('GRASP_pred_lowRes_BC23_slice69.mat') can be found under 'data' folder and can loaded by 'TWIX_2_GRASP_seg_main.m' by setting flags.highRes parameter to True (inside `loadingGraspParams.m`). The ResNet image series output will go through a quick basis estimation, which will then be used for the reconstruction of a high spatial and temporal resolution final image series with a 1-second (2 spokes) temporal resolution and 144 time frames.
+ResNet output image series ('GRASP_pred_lowRes_BC23_slice69.mat') can be found under 'data' folder and can loaded by 'TWIX_2_GRASP_seg_main.m' by setting flags.highRes parameter to True (inside `loadingGraspParams.m`). The ResNet image series output will go through a quick basis estimation, which will then be used for the reconstruction of a high spatial and temporal resolution final image series with a 1-second (2 spokes) temporal resolution and 144 time frames. 
 
 ## Citation
 
