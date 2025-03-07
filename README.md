@@ -25,27 +25,24 @@ All relevant ResNet Python code is available inside `ResNet_ELITE` folder, which
 
 Unfortunately the data files (`Train_DCE_data.mat` and `Valid_DCE_data.mat`) and weightes ('`DCE_params_RESNET_epoch=150`') are too large to be hosted here but can be provided upon reasonable request.
 
-run:
+To run:
 ```bash
 python Train_valid_DCE_ResNet.py
 ```
-
-- This will train the network and save the weights as 
-
 ## Test ResNet Model
 
-To test the trained model, run:
+To run the trained model, run:
 
 ```bash
 python Test_DCE_ResNet.py
 ```
 
-- This script uses a real undersampled DCE image series reconstructed with 2 spokes as an input (`GRASP_real_lowRes_BC266_slice86.mat`).
-- The output is saved as `GRASP_pred_lowRes_BC266_slice86.mat`, containing the reconstructed image series with reduced streak artifacts while maintaining contrast dynamics. 
+- This script uses a real undersampled DCE image series reconstructed with 2 spokes as an input (`GRASP_real_lowRes_BC23_slice69.mat`).
+- The output is saved as `GRASP_pred_lowRes_BC23_slice69.mat`, containing the reconstructed image series with reduced streak artifacts while maintaining contrast dynamics.
 
-## Run ELITE framework using ResNet output
+## Run ELITE framework with ResNet output
 
-ResNet output image series is read by 'TWIX_2_GRASP_seg_main.m' by setting flags.highRes parameter to True. ResNet image series output will go through basis estimation, which will in the end, result in high spatial and temporal resolution final image series with a 1-second (2 spokes) temporal resolution and 144 time frames.
+ResNet output image series is read by 'TWIX_2_GRASP_seg_main.m' by setting flags.highRes parameter to True. ResNet image series output will go through basis estimation, and in the end result in high spatial and temporal resolution final image series with a 1-second (2 spokes) temporal resolution and 144 time frames.
 
 ## Citation
 
