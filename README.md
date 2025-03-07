@@ -46,4 +46,4 @@ ResNet output image series ('GRASP_pred_lowRes_BC23_slice69.mat') can be found u
 
 ## Citation
 
-If you use the ELITE DCE Breast data or code in your research, please cite our preprint:https://doi.org/10.1148/ryai.240345
+If you use the ELITE DCE Breast data or code in your research, please cite our preprint: https://doi.org/10.1148/ryai.240345
