@@ -4,7 +4,7 @@ This repository contains MATLAB and Python scripts to replicate our reconstructi
 
 ## Instructions
 
-The main MATLAB code `TWIX_2_GRASP_seg_main.m` can be executed with the two options below by toggling the `flags.highRes` parameter inside `loadingGraspParams.m`:
+The main MATLAB code `TWIX_2_GRASP_seg_main.m` can be executed with the two options below by toggling the `flags.highRes` parameter inside `loadingGraspParams.m`.
 
 ### ELITE Reconstruction
 
@@ -37,12 +37,12 @@ To run the trained model, run:
 python Test_DCE_ResNet.py
 ```
 
-- This script uses a real undersampled DCE image series reconstructed with 2 spokes as an input (`GRASP_real_lowRes_BC23_slice69.mat`).
-- The output is saved as `GRASP_pred_lowRes_BC23_slice69.mat`, containing the reconstructed image series with reduced streak artifacts while maintaining contrast dynamics.
+- The script uses a real undersampled DCE image series reconstructed with 2 spokes as an input (`GRASP_real_lowRes_BC23_slice69.mat`).
+- The script will output a DCE image series with reduced streak artifacts while maintaining contrast dynamics ('GRASP_pred_lowRes_BC23_slice69.mat`).
 
-## Run ELITE framework with ResNet output
+## Run ELITE framework with ResNet output 
 
-ResNet output image series is read by 'TWIX_2_GRASP_seg_main.m' by setting flags.highRes parameter to True. ResNet image series output will go through basis estimation, and in the end result in high spatial and temporal resolution final image series with a 1-second (2 spokes) temporal resolution and 144 time frames.
+ResNet output image series ('GRASP_pred_lowRes_BC23_slice69.mat') can be found under 'data' folder and can loaded by 'TWIX_2_GRASP_seg_main.m' by setting flags.highRes parameter to True (inside `loadingGraspParams.m`). The ResNet image series output will go through a quick basis estimation, which will then be used for the reconstruction of a high spatial and temporal resolution final image series with a 1-second (2 spokes) temporal resolution and 144 time frames.
 
 ## Citation
 
