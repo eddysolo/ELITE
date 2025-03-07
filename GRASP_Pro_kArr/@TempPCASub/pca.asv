@@ -1,0 +1,62 @@
+function [result,PC,mean_sub] = pca(data)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%2D images
+[M,N] = size(data);
+% subtract off the mean for each dimension
+mn = mean(data,2);
+mean_sub=repmat(mn,1,N);
+data = data - repmat(mn,1,N);
+% calculate the covariance matrix
+covariance=cov(data');
+% find the eigenvectors and eigenvalues
+[PC, V] = eig(covariance);
+% extract diagonal of matrix as vector
+V = diag(V);
+% sort the variances in decreasing order
+[junk, rindices] = sort(-1*V);
+V = V(rindices);
+PC = PC(:,rindices);
+% project the original data set
+signals = PC' * data;
+
+load('D:\lab\lifeng\Data\ISMRM2010\NewData\RealTimeCine\0.01\Liu8_01.mat')
+data=recon_cs_RealTimeCine;
+[M,N,S] = size(data);
+for i=1:M
+data1=squeeze(data(i,:,:));
+data1=data1';
+mn = mean(data1,2);
+mean_sub=repmat(mn,1,N);
+data1 = data1 - mean_sub;
+covariance=cov(data1');
+[PC, V] = eig(covariance);
+V = diag(V);
+[junk, rindices] = sort(-1*V);
+V = V(rindices);
+PC = PC(:,rindices);
+signal = PC' * data1;
+datanew(i,:,:)=signal';
+clear signal data1 covariance PC
+end
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%3D images
+[M,N,S] = size(data);
+temp=zeros(M*N,S);
+for i=1:M
+    temp((i-1)*N+1:i*N,:)=squeeze(data(i,:,:));
+end
+data=temp;clear temp
+mn = mean(data,2);
+mean_sub=repmat(mn,1,S);
+data = data - repmat(mn,1,S);
+covariance=cov(data');
+[PC, V] = eig(covariance);
+V = diag(V);
+[junk, rindices] = sort(-1*V);
+V = V(rindices);
+PC = PC(:,rindices);
+signals = PC' * data;
+result=zeros(M,N,S);
+for i=1:M
+    result(i,:,:)=signals((i-1)*N+1:i*N,:);
+end

@@ -1,0 +1,3 @@
+function [data] = ipca(signals,PC,mean_sub)
+
+data=(PC*signals)+mean_sub;
