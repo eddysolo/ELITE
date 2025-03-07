@@ -17,7 +17,7 @@ ResNet Python code is available inside `ResNet_ELITE` folder, which includes:
 
 #### Train the ResNet Model from scratch
 
-Unfortunately the data files (`Train_DCE_data.mat` and `Valid_DCE_data.mat`) and weightes ('`DCE_params_RESNET_epoch=150`') are too large to be hosted here but can be provided upon reasonable request.
+Unfortunately the data files (`Train_DCE_data.mat` and `Valid_DCE_data.mat`) and weightes (`DCE_params_RESNET_epoch=150`) are too large to be hosted here but can be provided upon reasonable request.
 
 To run:
 ```bash
