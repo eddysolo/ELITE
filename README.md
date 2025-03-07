@@ -4,7 +4,7 @@ This repository contains MATLAB and Python scripts to replicate our reconstructi
 
 ### ELITE Reconstruction
 
-The main MATLAB code `TWIX_2_GRASP_seg_main.m` performs a temporal basis estimation using principal component analysis (PCA) for each tissue segment. By default, this code will reconstruct an image series with a temporal resolution of 4.2 seconds (8 spokes) containing 36-time frames. To run this code, make sure `flags.highRes` (inside `loadingGraspParams.m`) is set to False. An example of a segmentation mask file can be found inside the `data` folder, and the corresponding raw k-space breast dataset (`fastMRI_breast_141_2.h5`) can be freely downloaded from fastMRI: https://fastmri.med.nyu.edu/. 
+The main MATLAB code `TWIX_2_GRASP_seg_main.m` performs a temporal basis estimation using principal component analysis (PCA) for each breast tissue segment. By default, this code will reconstruct an image series with a temporal resolution of 4.2 seconds (8 spokes) containing 36-time frames. To run this code, make sure `flags.highRes` (inside `loadingGraspParams.m`) is set to False. An example of a segmentation mask file can be found inside the `data` folder, and the corresponding raw k-space breast dataset (`fastMRI_breast_141_2.h5`) can be freely downloaded from fastMRI: https://fastmri.med.nyu.edu/. 
 
 ### ELITE Reconstruction Aided by Residual Neural Network (ResNet)
 
