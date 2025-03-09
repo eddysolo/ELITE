@@ -32,7 +32,7 @@ python Test_DCE_ResNet.py
 ```
 
 - The script uses a real undersampled DCE image series reconstructed with 2 spokes as an input (`GRASP_real_lowRes_BC23_slice69.mat`).
-- The script generates a DCE image series with reduced streak artifacts and maintaining contrast dynamics (`GRASP_pred_lowRes_BC23_slice69.mat`).
+- The script generates a DCE image series with reduced streak artifacts while maintaining contrast dynamics (`GRASP_pred_lowRes_BC23_slice69.mat`).
 
 #### Run ELITE Reconstruction with ResNet output 
 
